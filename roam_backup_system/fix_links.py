@@ -14,6 +14,7 @@ def space_remover(string):
 	"""
 	# find the position of the beginning of the link
 	print("Reaches")
+	print(string)
 	return string.replace(" ", "_")
 	
 
@@ -22,9 +23,9 @@ def reference_fix(txt):
 	"""
 	Fixes roam research references
 	"""
-	global level
-	for i in range(level):
-		txt = re.sub("\[\[(.*?)\]\]", "[\\1]({}.md)".format(space_remover("\\1")), txt)
+	global LEVEL
+	for i in range(LEVEL):
+		txt = re.sub("\[\[(.*?)\]\]","[\\1](\\1.md)",txt)
 	
 	return txt
 

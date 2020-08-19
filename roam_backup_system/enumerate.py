@@ -11,8 +11,8 @@ from os.path import isfile, join
 
 
 # ignore all files that you don't want to commit
-IGNORE = ['.DS_Store', '.gitignore', '.git']
-PATH = '.'
+IGNORE = ['.DS_Store', '.gitignore', '.git', 'docs']
+PATH = '../'
 
 def enum():
 	mypath = '.'

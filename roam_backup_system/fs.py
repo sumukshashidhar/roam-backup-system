@@ -19,11 +19,12 @@ def make_dir():
 
 
 def fix_file(filename):
-	
+	global BACKUP_DIR
 	# open the file first
 
 	lines = [] # store the lines of the file in a list
-
+	
+	print("comes here")
 	with open(filename, 'r') as f:
 		lines = f.readlines()
 
@@ -31,8 +32,9 @@ def fix_file(filename):
 	for i in lines:
 		fixed_lines.append(rf(i))
 
-	print(fixed_lines)
+	with open(BACKUP_DIR+'/'+filename, 'w+') as f:
+		f.writelines(fixed_lines)
 
 
 
-fix_file(test)
+fix_file('test')
