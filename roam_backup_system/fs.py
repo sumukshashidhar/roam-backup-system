@@ -37,4 +37,4 @@ def fix_file(filename):
 
 
 
-fix_file('test')
+#fix_file('test')
