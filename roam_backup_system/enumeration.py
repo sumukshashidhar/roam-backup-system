@@ -12,11 +12,10 @@ from os.path import isfile, join
 
 # ignore all files that you don't want to commit
 IGNORE = ['.DS_Store', '.gitignore', '.git', 'docs']
-PATH = '../'
+PATH = './../'
 
 def enum():
-	mypath = '.'
-	onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+	onlyfiles = [f for f in listdir(PATH) if isfile(join(PATH, f))]
 	
 	for i in IGNORE:
 		try:

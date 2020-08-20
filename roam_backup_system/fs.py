@@ -5,7 +5,7 @@ fixed references
 
 
 # since i'm using github pages, I will use the docs/ directory
-BACKUP_DIR = 'docs'
+BACKUP_DIR = './../docs'
 
 import os
 
@@ -21,18 +21,15 @@ def make_dir():
 def fix_file(filename):
 	global BACKUP_DIR
 	# open the file first
-
 	lines = [] # store the lines of the file in a list
-	
-	print("comes here")
+	print("Working with file: ", filename)
 	with open(filename, 'r') as f:
 		lines = f.readlines()
-
 	fixed_lines = []
 	for i in lines:
 		fixed_lines.append(rf(i))
-
-	with open(BACKUP_DIR+'/'+filename, 'w+') as f:
+	print(fixed_lines)
+	with open(BACKUP_DIR+'/'+filename[3:], 'w+') as f:
 		f.writelines(fixed_lines)
 
 
