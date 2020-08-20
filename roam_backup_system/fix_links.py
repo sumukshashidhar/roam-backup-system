@@ -3,19 +3,7 @@ import re
 
 
 # this is to tell it how deep it should look for references
-LEVEL = 3 
-
-
-
-
-def space_remover(string):
-	"""
-	Simple Function to remove the spaces from file link
-	"""
-	# find the position of the beginning of the link
-	return string.replace(" ", "_")
-	
-
+LEVEL = 3
 
 def reference_fix(txt):
 	"""
