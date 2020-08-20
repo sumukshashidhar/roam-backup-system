@@ -28,7 +28,6 @@ def fix_file(filename):
 	fixed_lines = []
 	for i in lines:
 		fixed_lines.append(rf(i))
-	print(fixed_lines)
 	with open(BACKUP_DIR+'/'+filename[3:], 'w+') as f:
 		f.writelines(fixed_lines)
 

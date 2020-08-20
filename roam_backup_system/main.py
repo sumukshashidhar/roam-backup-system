@@ -15,7 +15,6 @@ if __name__ == "__main__":
 	rw()
 	# first enumerate the directories
 	files = enum()
-	print(files)
 	# make the backup dir if it doesn't exist at first
 	fs.make_dir()
 	# then enumerate over the files

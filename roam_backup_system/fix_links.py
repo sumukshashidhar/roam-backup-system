@@ -13,8 +13,6 @@ def space_remover(string):
 	Simple Function to remove the spaces from file link
 	"""
 	# find the position of the beginning of the link
-	print("Reaches")
-	print(string)
 	return string.replace(" ", "_")
 	
 
