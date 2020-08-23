@@ -22,7 +22,6 @@ def reference_fix(txt):
 			except KeyError:
 				reference_map[i] = [filename[3:]]
 		txt = re.sub("\[\[(.*?)\]\]","[\\1](\\1.md)",txt)
-	print(reference_map)
 	return txt
 
 def set_filename(fname):
