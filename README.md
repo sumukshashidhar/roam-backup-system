@@ -9,9 +9,7 @@ A simple roam research backup system written in python that backs up to git, and
 3. Add the roam_backup_system folder to the github repository
 4. Modify your gitignore to ignore the ```roam_backup_system``` folder and the regular markdown files in the root directory
 5. Copy your files over to the repository
-6. From the root of your repository, run ```python roam_backup_system/main.py```
-7. ....
-8. Profit!
+6. Navigate inside the ```roam_backup_system``` and run the ```main.py``` file.
 
 
 # Word of Warning
