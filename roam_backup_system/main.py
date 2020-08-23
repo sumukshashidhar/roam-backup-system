@@ -5,7 +5,7 @@ import git_push as gitpusher
 from enumeration import enum
 from remove_whitespace import rem_whitespaces as rw
 import fs
-import backlinks as add_backlinks
+from backlinks import add_backlink as add_backlinks
 
 
 GITPUSH = False 
