@@ -5,6 +5,9 @@ import git_push as gitpusher
 from enumeration import enum
 from remove_whitespace import rem_whitespaces as rw
 import fs
+import backlinks as add_backlinks
+
+
 GITPUSH = False 
 
 
@@ -20,5 +23,9 @@ if __name__ == "__main__":
 	# then enumerate over the files
 	for i in files:
 		fs.fix_file("../"+i)
+
+	# add backlinks
+	add_backlinks()
+	
 	if GITPUSH:
 		gitpusher.push()

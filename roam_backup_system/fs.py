@@ -10,7 +10,7 @@ BACKUP_DIR = './../docs'
 import os
 
 from fix_links import reference_fix as rf
-
+from fix_links import set_filename as sf
 def make_dir():
 	global BACKUP_DIR
 	if not os.path.exists(BACKUP_DIR):
@@ -23,6 +23,7 @@ def fix_file(filename):
 	# open the file first
 	lines = [] # store the lines of the file in a list
 	print("Working with file: ", filename)
+	sf(filename)
 	with open(filename, 'r') as f:
 		lines = f.readlines()
 	fixed_lines = []
