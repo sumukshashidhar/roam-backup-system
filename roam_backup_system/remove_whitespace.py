@@ -16,4 +16,9 @@ def remove_question_marks():
 				lines = f.readlines()
 			with open("./../"+i.replace("?", ""), 'w+') as f:
 				f.writelines(lines)
-			os.remove("./../"+i)
+			try:
+				os.remove("./../"+i)
+			except OSError as e:
+				print("Error", e.sterror)
+
+				
