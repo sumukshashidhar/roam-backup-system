@@ -10,7 +10,7 @@ A simple roam research backup system written in python that backs up to git, and
 3. Add the `roam_backup_system` folder to the github repository that you have just clone to your computer. 
 4. Export a markdown zip file from [Roam Research](https://roamresearch.com) and unzip the files. 
 5. Copy all the files over to the repository that you just cloned with github. 
-6. If you want these files to be pushed to github automatically, open the `main.py` folder with your favourite text editor and change the `GITPUSH` variable to `True`
+6. All files are pushed to github by default. If you want to change this behaviour, add the `-p` or `--push` flag along with your python file to stop autopushing!
 7. Navigate inside the ```roam_backup_system``` and run the ```main.py``` file, with `python3 main.py` or `python main.py`.
 8. Go onto GitHub Repository settings, and enable GitHub Pages to be served from the `master_branch/docs` folder
 
