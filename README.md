@@ -14,6 +14,9 @@ A simple roam research backup system written in python that backs up to git, and
 7. Navigate inside the ```roam_backup_system``` and run the ```main.py``` file, with `python3 main.py` or `python main.py`.
 8. Go onto GitHub Repository settings, and enable GitHub Pages to be served from the `master_branch/docs` folder
 
+## Repeated Backups
+Once you've put in the initial work, you can make regular backups by just deleting the contents of your github repository, and pasting the newly exported content from Roam. Then follow Step 7 again!
+
 
 # Word of Warning
 
