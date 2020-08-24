@@ -14,7 +14,7 @@ GITPUSH = False
 if __name__ == "__main__":
 	# let us run the whitespace remover first, to ensure everything
 	# has an underscore - GH pages does not recognize links without it
-	rw()
+	# rw() # appears as though whitespaces are being handled well. No need of this random stuff
 	# first enumerate the directories
 	files = enum()
 	# make the backup dir if it doesn't exist at first
@@ -28,6 +28,6 @@ if __name__ == "__main__":
 
 	# create index
 	create_index()
-	
+
 	if GITPUSH:
 		gitpusher.push()

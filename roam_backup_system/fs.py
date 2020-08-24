@@ -11,9 +11,13 @@ import os
 
 from fix_links import reference_fix as rf
 from fix_links import set_filename as sf
+import shutil
 def make_dir():
 	global BACKUP_DIR
 	if not os.path.exists(BACKUP_DIR):
+		os.makedirs(BACKUP_DIR)
+	else:
+		shutil.rmtree(BACKUP_DIR)
 		os.makedirs(BACKUP_DIR)
 
 
