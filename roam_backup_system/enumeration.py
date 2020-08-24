@@ -14,8 +14,8 @@ from os.path import isfile, join
 IGNORE = ['.DS_Store', '.gitignore', '.git', 'docs', 'README.md', 'LICENSE.txt']
 
 def enum(PATH=None):
-	path = "./../" if PATH is None else PATH
-	onlyfiles = [f for f in listdir(PATH) if isfile(join(PATH, f))]
+	paths = "./../" if PATH is None else PATH
+	onlyfiles = [f for f in listdir(paths) if isfile(join(paths, f))]
 	
 	for i in IGNORE:
 		try:
