@@ -3,8 +3,6 @@ import re
 from fix_links import reference_map
 
 def add_backlink():
-
-    # now we get the entire reference map
     
     for i in reference_map.keys():
         # TODO: HAS TO BE CHANGED IN THE FUTURE. VERY MESSY FILEPATH
