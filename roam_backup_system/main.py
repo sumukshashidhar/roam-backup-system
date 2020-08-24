@@ -10,7 +10,7 @@ from backlinks import add_backlink as add_backlinks
 from index_creator import create_index as create_index
 from github_config_update import add_yml as ymladd
 
-GITPUSH = False 
+GITPUSH = True
 
 
 if __name__ == "__main__":
