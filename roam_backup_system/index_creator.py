@@ -4,7 +4,7 @@ DOCS_PATH = "./../docs/"
 def create_index():
     global DOCS_PATH
     files = enum(DOCS_PATH)
-    files = files.sort()
+    files.sort()
     with open("./../docs/"+"index.md", 'w+') as f:
         f.write("# List of All Files.\n")
         f.write("\n")
