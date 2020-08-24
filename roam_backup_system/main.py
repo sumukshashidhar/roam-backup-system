@@ -8,6 +8,7 @@ from remove_whitespace import remove_question_marks as rq
 import fs
 from backlinks import add_backlink as add_backlinks
 from index_creator import create_index as create_index
+from github_config_update import add_yml as ymladd
 
 GITPUSH = False 
 
@@ -30,6 +31,9 @@ if __name__ == "__main__":
 
 	# create index
 	create_index()
+
+	# add the yml file
+	ymladd()
 
 	if GITPUSH:
 		gitpusher.push()
