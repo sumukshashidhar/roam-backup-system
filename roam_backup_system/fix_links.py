@@ -18,7 +18,8 @@ def reference_fix(txt):
 		if file_references != []:
 			try:
 				for i in file_references:
-					reference_map[i].append(filename[3:])
+					if filename[3:] not in reference_map[i]:
+						reference_map[i].append(filename[3:])
 			except KeyError:
 				reference_map[i] = [filename[3:]]
 		txt = re.sub("\[\[(.*?)\]\]","[\\1](\\1.md)",txt)
