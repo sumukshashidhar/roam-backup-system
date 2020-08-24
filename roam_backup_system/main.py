@@ -6,10 +6,9 @@ from enumeration import enum
 from remove_whitespace import rem_whitespaces as rw
 import fs
 from backlinks import add_backlink as add_backlinks
-
+from index_creator import create_index as create_index
 
 GITPUSH = False 
-
 
 
 if __name__ == "__main__":
@@ -26,6 +25,9 @@ if __name__ == "__main__":
 
 	# add backlinks
 	add_backlinks()
+
+	# create index
+	create_index()
 	
 	if GITPUSH:
 		gitpusher.push()
