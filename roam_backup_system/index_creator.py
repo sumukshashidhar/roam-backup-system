@@ -8,4 +8,4 @@ def create_index():
         f.write("# List of All Files.\n")
         f.write("\n")
         for i in files:
-            f.write(f"* [{i}](./{i}.md)\n")
+            f.write(f"* [{i[:-3]}](./{i})\n")
