@@ -3,6 +3,15 @@ import re
 DOCS_PATH = "./../docs/"
 
 def identify_log_days(files):
+    """Uses regex to find Log Days in Roam, and exclude them from the main file list. 
+    To ensure that the view is not overly cluttered
+
+    Args:
+        files (list): The list of all files given by enumeration
+
+    Returns:
+        list: a list of all the log days
+    """
     onlylogs = []
     for i in files:
         regex = r"(\b\d\d[trns][thd], 20\d\d.md|\b\d[trns][thd], 20\d\d.md)"
@@ -13,6 +22,12 @@ def identify_log_days(files):
 
 
 def create_index():
+    """Creates the index.md file by going over all the files and removing the log days. 
+    A better system will be implemented in a future version. 
+
+
+    Must be noted that this is for backup purposes only, and not for common use
+    """
     global DOCS_PATH
     files = enum(DOCS_PATH)
     files.sort()

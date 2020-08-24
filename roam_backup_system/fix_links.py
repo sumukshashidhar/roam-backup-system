@@ -8,7 +8,8 @@ reference_map = {}
 filename = ''
 def reference_fix(txt):
 	"""
-	Fixes roam research references
+	Fixes roam research references by using regex expressions. 
+	Also prepares a reference map based on the links it encounters to add backlinks
 	"""
 	global LEVEL
 	global reference_map
@@ -26,6 +27,12 @@ def reference_fix(txt):
 	return txt
 
 def set_filename(fname):
+	"""Sets the filename of the current file that is being worked on. Essential for
+	backlinks, as this filename is appended to the backlinks reference map
+
+	Args:
+		fname (String): the name of the file that is currently being parsed
+	"""
 	global filename
 	filename = fname
 	return
