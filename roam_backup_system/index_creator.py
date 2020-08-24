@@ -5,7 +5,8 @@ DOCS_PATH = "./../docs/"
 def identify_log_days(files):
     onlylogs = []
     for i in files:
-        text = re.findall("(\b\d\d[trns][thd], 20\d\d|\b\d[trns][thd], 20\d\d)", i)
+        regex = r"(\b\d\d[trns][thd], 20\d\d.md|\b\d[trns][thd], 20\d\d.md)"
+        text = re.findall(regex, i)
         if text != [] and text is not None and text != '':
             onlylogs.append(i)
     return onlylogs
@@ -20,6 +21,7 @@ def create_index():
         files.remove(i)
     with open("./../docs/"+"index.md", 'w+') as f:
         f.write("# List of All Files.\n")
+        f.write("## Pages\n")
         f.write("\n")
         for i in files:
             f.write(f"* [{i[:-3]}](./{i})\n")
