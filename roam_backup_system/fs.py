@@ -36,7 +36,7 @@ def fix_file(filename):
 	global BACKUP_DIR
 	# open the file first
 	lines = [] # store the lines of the file in a list
-	print("Working with file: ", filename)
+	# print("Working with file: ", filename)
 	sf(filename)
 	with open(filename, 'r') as f:
 		lines = f.readlines()
